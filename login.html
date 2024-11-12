@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSH</title>
+    <link rel="icon" href="assets/SQUARED.png" type="image/icon type">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/433cce3012.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="width_limiter">
+            <section class="navbar">
+                <a href="index.html"><button class="back_to_aboutus"><i class="fa-solid fa-arrow-left"></i> &nbsp;GO BACK</button></a>
+                <img class="Main_logo" src="assets/MiniLogo.png" alt="">
+            </section>
+        </div>
+    </nav>
+    <section class="login">
+        <div class="width_limiter">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div class="auth-form login-form active">
+                    <h2>Login</h2>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <span class="password-toggle" onclick="togglePassword('login-password')">🔒</span>
+                    </div>
+                    <button class="submit-btn">Login</button>
+                    <span class="toggle-link" onclick="toggleForms()">Don't have an account? Sign Up</span>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="auth-form signup-form">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                        <span class="password-toggle" onclick="togglePassword('signup-password')">🔓</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <button class="submit-btn">Sign Up</button>
+                    <span class="toggle-link" onclick="toggleForms()">Already have an account? Login</span>
+                </div>
+            </div>
+            <!--gpt-->
+        </div>
+    </section>
+    <footer>
+        <div class="width_limiter">
+            <h1 class="copyright">© Copyright 2024, KSH Inc. All Rights Reserved.</h1>
+        </div>
+    </footer>
+</body>
+
+</html>
