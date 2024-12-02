@@ -242,6 +242,15 @@ h2 {
 }
 
 .back_to_aboutus:hover {
+    border-radius: 999px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #F4F3EF;
+    font-weight: 900;
+    position: absolute;
+    left: 0px;
+    padding: 40px;
+    transform: translateY(-50%);
     left: -20px;
 }
 
