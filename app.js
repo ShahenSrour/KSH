@@ -73,3 +73,62 @@ addProject.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => toggleForm(false));
+
+//
+
+
+// CLIENTS LOGIC
+const addClientBtn = document.querySelector('.add-client-btn');
+const clientsContainer = document.getElementById('clients-container');
+const clientOverlay = document.getElementById('overlay'); // Same overlay for both
+const clientFormContainer = document.getElementById('form-container');
+const clientNameInput = document.getElementById('client-name');
+const clientStatusInput = document.getElementById('client-status');
+const addClientFormBtn = document.getElementById('add-client');
+const cancelClientForm = document.getElementById('cancel-form');
+
+let clients = [];
+
+function toggleClientForm(show) {
+    clientFormContainer.style.display = show ? 'block' : 'none';
+    clientOverlay.style.display = show ? 'block' : 'none';
+}
+
+function addNewClient(name, status) {
+    if (clients.length < 20) {
+        clients.push({ name, status });
+        renderClients();
+    } else {
+        alert('You can only add up to 20 clients.');
+    }
+}
+
+function renderClients() {
+    clientsContainer.innerHTML = ''; // Clear existing clients
+    clients.forEach((client, index) => {
+        const clientCard = document.createElement('div');
+        clientCard.classList.add('client-card');
+        clientCard.innerHTML = `
+      <div class="client-title">${index + 1}. ${client.name}</div>
+      <div class="client-status">Status: ${client.status}</div>
+    `;
+        clientsContainer.appendChild(clientCard);
+    });
+}
+
+addClientBtn.addEventListener('click', () => toggleClientForm(true));
+cancelClientForm.addEventListener('click', () => toggleClientForm(false));
+
+addClientFormBtn.addEventListener('click', () => {
+    const name = clientNameInput.value.trim();
+    const status = clientStatusInput.value;
+
+    if (name && status) {
+        addNewClient(name, status);
+        toggleClientForm(false);
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+clientOverlay.addEventListener('click', () => toggleClientForm(false));

@@ -448,3 +448,83 @@ h2 {
     color: #F4F3EF;
     transform: scale(1.1);
 }
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    margin: 2em auto;
+    max-width: 600px;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+#client-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#client-list li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#add-client {
+    margin-top: 2em;
+}
+
+input {
+    width: calc(100% - 100px);
+    padding: 0.5em;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
