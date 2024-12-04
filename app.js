@@ -73,3 +73,32 @@ addProject.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => toggleForm(false));
+
+
+/*
+
+
+
+
+
+*/
+// Handle Profile Picture Change
+const profilePicInput = document.getElementById('profile-pic-input');
+const profilePic = document.getElementById('profile-pic');
+
+profilePicInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            profilePic.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Handle Form Submission
+document.getElementById('profile-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Profile updated successfully!');
+});
